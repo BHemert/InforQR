@@ -33,8 +33,10 @@ def docxQR():
             run.font.name = 'Calibri'
             run.font.size = docx.shared.Pt(36)
             run.bold = True
+
             run.add_picture("./QRCODES/" + str(loc[0]) + "/" + str(loc[0]) + str(num) + ".png", width=Inches(0.6), height=Inches(0.6))
             run.add_text("  " + str(loc[0]) + str(num))
+
             try:
                 doc.save('./qr.docx')
             except:
