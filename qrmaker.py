@@ -7,6 +7,8 @@ from pickle import TRUE
 
 saveQR = TRUE # Set FALSE if you don't want to save qr images
 
+documentName = 'qr2' # Set document name where qr codes will be saved
+
 doc = docx.Document()
 
 list = ["AN1 6","AN2 6","AN3 6","AN4 6", # NORTON
@@ -38,10 +40,12 @@ def docxQR():
             run.add_text("  " + str(loc[0]) + str(num))
 
             try:
-                doc.save('./qr.docx')
+                doc.save('./' + documentName +'.docx')
             except:
                 print("Exception: Close docx file and rerun code!")
                 exit()
+                
+    print("Succesfully Saved all qr codes in: " + os.path.abspath('./' + documentName +'.docx'))
 
 def makeQR():
     for loc in list:
