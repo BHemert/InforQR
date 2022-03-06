@@ -11,7 +11,8 @@ documentName = 'qr2' # Set document name where qr codes will be saved
 
 doc = docx.Document()
 
-list = ["AN1 6","AN2 6","AN3 6","AN4 6", # NORTON
+list = [ #"[LOCATION] [AMOUNT OF QR CODES]"
+"AN1 6","AN2 6","AN3 6","AN4 6", # NORTON
  "AT1 9", "AT2 8", "AT3 8", "AT4 9", "AT5 9", "AT6 9", # THINK
 
   "AEA 8", "AEB 4", "AEC 3", "AED 5", "AEE 8", "AEF 8", "AEG 9", "AEH 8",  #EWENT / EMINENT
